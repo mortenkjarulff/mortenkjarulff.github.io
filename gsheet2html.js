@@ -1,4 +1,4 @@
-<!-- Start FAQ Check http://www.xn--kligel-byae.dk/ for an explanation -->
+<!-- Start FAQ Check http://www.xn--kligel-byae.dk/2017/09/brug-et-google-regneark-som-database.html for an explanation -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.7.4/showdown.min.js"></script>
 <script>// <![CDATA[
