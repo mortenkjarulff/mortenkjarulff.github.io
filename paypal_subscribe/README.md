@@ -1,4 +1,4 @@
-# Test PayPal subscribe
+# Test PayPal Subscribe
 
 [Subscribe](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B5ZXZY9JWVL6W)
 
