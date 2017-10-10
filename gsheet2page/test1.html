@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>test7</title>
+<title>test8</title>
 <script>
 
 // https://gist.github.com/terrywbrady/a03b25fe42959b304b1e
@@ -18,14 +18,14 @@ function savedata(json) {
 </script> 
 <script src="https://spreadsheets.google.com/feeds/list/1m5NxGi1nQF2OI77OdyJDu7mYjR1rG1KvGZHDgXmpZTw/1/public/values?alt=json-in-script&callback=savedata"></script>
 <script>
-  var idx_index=[-1,-1];
+  var idx_title=[-1,-1];
   var idx_article=[-1,-1];
   for (var i=0; i<sheetdata.length; i++) {
     
     if (sheetdata[i].gsx$keyword.$t == 'title') {
-      idx_index[1]=i;
-      if (idx_index[0] < 0) {
-        idx_index[0]=i
+      idx_title[1]=i;
+      if (idx_title[0] < 0) {
+        idx_title[0]=i
       }
       continue;
     }
