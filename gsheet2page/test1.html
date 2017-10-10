@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>test5</title>
+<title>test6</title>
 <script>
 
 // https://gist.github.com/terrywbrady/a03b25fe42959b304b1e
@@ -19,16 +19,23 @@ function savedata(json) {
 <script src="https://spreadsheets.google.com/feeds/list/1m5NxGi1nQF2OI77OdyJDu7mYjR1rG1KvGZHDgXmpZTw/1/public/values?alt=json-in-script&callback=savedata"></script>
 </head>
 <body>
-xxx
+xxx<br/>
 <script>
 document.write('aaa<br/>');
-document.write(sheetdata.length);
+document.write('length[' + sheetdata.length + ']<br/>');
 document.write('bbb<br/>');
 for (var i=0; i<sheetdata.length; i++) {
-  document.write('Control[' + sheetdata[i].gsx$control.$t + '] Keyword[' + sheetdata[i].gsx$keyword.$t + '] Value[' + sheetdata[i].gsx$value.$t + ']<br/>');
+  document.write('Control[' + sheetdata[i].gsx$control.$t + ']');
+  document.write('Comment[' + sheetdata[i].gsx$comment.$t + ']');
+  document.write('Keyword[' + sheetdata[i].gsx$keyword.$t + ']');
+  document.write('Value1[' + sheetdata[i].gsx$value1.$t + ']');
+  document.write('Modifier1[' + sheetdata[i].gsx$modifier1.$t + ']');
+  document.write('Value2[' + sheetdata[i].gsx$value2.$t + ']');
+  document.write('Modifier2[' + sheetdata[i].gsx$modifier2.$t + ']');
+  document.write('<br/>');
 }
 document.write('ccc<br/>');
 </script>
-yyy
+yyy<br/>
 </body>
 <html>
