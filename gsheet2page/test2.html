@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<script>
+  var sheetdata=null;
+
+  function savedata(json) {
+    sheetdata=json.feed.entry;
+  }
+</script> 
+<script src="https://spreadsheets.google.com/feeds/list/1m5NxGi1nQF2OI77OdyJDu7mYjR1rG1KvGZHDgXmpZTw/1/public/values?alt=json-in-script&callback=savedata"></script>
+<script>
+  var idx_title=[-1,-1];
+  var idx_article=[-1,-1];
+  for (var i=0; i<sheetdata.length; i++) {
+    
+    if (sheetdata[i].gsx$keyword.$t == 'title') {
+      idx_title[1]=i;
+      if (idx_title[0] < 0) {
+        idx_title[0]=i
+      }
+      continue;
+    }
+    
+    if (sheetdata[i].gsx$keyword.$t == 'article') {
+      idx_article[1]=i;
+      if (idx_article[0] < 0) {
+        idx_article[0]=i
+      }
+      continue;
+    }
+    
+    if (sheetdata[i].gsx$keyword.$t == 'template') {
+      idx_template[1]=i;
+      if (idx_template[0] < 0) {
+        idx_template[0]=i
+      }
+      continue;
+    }
+    
+  }
+</script>
+<script>
+  switch(sheetdata[idx_template[0]].gsx$value1.$t) {
+    case 'template1':
+      document.write('<title>' + sheetdata[idx_title[0]].gsx$value1.$t + '</title>');
+      document.write('</head>');
+      document.write('<body>');
+      document.write('<h1>template1</h1>');
+      for (i=idx_article[0]; i<=idx_article[1]; i++) {
+        document.write('article_value1[' + sheetdata[i].gsx$value1.$t + ']<br/>');
+        document.write('article_value2[' + sheetdata[i].gsx$value2.$t + ']<br/>');
+      }
+      document.write('</body>');
+      document.write('</html>');
+      break;
+    case 'template2':
+      break;
+    default:
+      break;
+  }
+</script>
