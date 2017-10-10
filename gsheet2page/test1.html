@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>test4</title>
+<title>test5</title>
 <script>
 
 // https://gist.github.com/terrywbrady/a03b25fe42959b304b1e
@@ -21,9 +21,13 @@ function savedata(json) {
 <body>
 xxx
 <script>
-document.write('aaa');
+document.write('aaa<br/>');
 document.write(sheetdata.length);
-document.write('bbb');
+document.write('bbb<br/>');
+for (var i=0; i<sheetdata.length; i++) {
+  document.write('Control[' + sheetdata[i].gsx$control.$t + '] Keyword[' + sheetdata[i].gsx$keyword.$t + '] Value[' + sheetdata[i].gsx$value.$t + ']<br/>');
+}
+document.write('ccc<br/>');
 </script>
 yyy
 </body>
