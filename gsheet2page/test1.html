@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
 <head>
-<title>test1</title>
+<title>test2</title>
 <script>
 
 // https://gist.github.com/terrywbrady/a03b25fe42959b304b1e
+// https://docs.google.com/spreadsheets/d/1m5NxGi1nQF2OI77OdyJDu7mYjR1rG1KvGZHDgXmpZTw/edit#gid=0
 
 var sheetdata=null;
 
@@ -13,12 +14,15 @@ function savedata(json) {
 }
 
 </script> 
-<script src="https://spreadsheets.google.com/feeds/cells/+++id/1/public/values?alt=json-in-script&callback=savedata"></script>
+<script src="https://spreadsheets.google.com/feeds/cells/1m5NxGi1nQF2OI77OdyJDu7mYjR1rG1KvGZHDgXmpZTw/1/public/values?alt=json-in-script&callback=savedata"></script>
 </head>
 <body>
-aaa
+xxx
 <script>
+document.write('aaa');
+document.write(data.length);
+document.write('bbb');
 </script>
-bbb
+yyy
 </body>
 <html>
