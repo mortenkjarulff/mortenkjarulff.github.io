@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<title>test1</title>
+<script>
+
+// https://gist.github.com/terrywbrady/a03b25fe42959b304b1e
+
+var sheetdata=null;
+
+function savedata(json) {
+  sheetdata=json.feed.entry;
+}
+
+</script> 
+<script src="https://spreadsheets.google.com/feeds/cells/+++id/1/public/values?alt=json-in-script&callback=savedata"></script>
+</head>
+<body>
+aaa
+<script>
+</script>
+bbb
+</body>
+<html>
