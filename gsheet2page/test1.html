@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>test6</title>
+<title>test7</title>
 <script>
 
 // https://gist.github.com/terrywbrady/a03b25fe42959b304b1e
@@ -17,6 +17,29 @@ function savedata(json) {
 
 </script> 
 <script src="https://spreadsheets.google.com/feeds/list/1m5NxGi1nQF2OI77OdyJDu7mYjR1rG1KvGZHDgXmpZTw/1/public/values?alt=json-in-script&callback=savedata"></script>
+<script>
+  var idx_index=[-1,-1];
+  var idx_article=[-1,-1];
+  for (var i=0; i<sheetdata.length; i++) {
+    
+    if (sheetdata[i].gsx$keyword.$t == 'title') {
+      idx_index[1]=i;
+      if (idx_index[0] < 0) {
+        idx_index[0]=i
+      }
+      continue;
+    }
+    
+    if (sheetdata[i].gsx$keyword.$t == 'article') {
+      idx_article[1]=i;
+      if (idx_article[0] < 0) {
+        idx_article[0]=i
+      }
+      continue;
+    }
+    
+  }
+</script>
 </head>
 <body>
 xxx<br/>
@@ -35,6 +58,12 @@ for (var i=0; i<sheetdata.length; i++) {
   document.write('<br/>');
 }
 document.write('ccc<br/>');
+document.write('title[' + sheetdata[idx_title[0]].gsx$value1.$t + ']<br/>');
+for (i=idx_article[0]; i<=idx_article[1]; i++) {
+  document.write('article_value1[' + sheetdata[i].gsx$value1.$t + ']<br/>');
+  document.write('article_value2[' + sheetdata[i].gsx$value2.$t + ']<br/>');
+}
+document.write('ddd<br/>');
 </script>
 yyy<br/>
 </body>
