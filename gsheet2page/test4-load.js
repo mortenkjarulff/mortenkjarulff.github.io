@@ -1,10 +1,3 @@
-<!doctype html>
-<html>
-<head>
-<script>
-  var gsheet='1m5NxGi1nQF2OI77OdyJDu7mYjR1rG1KvGZHDgXmpZTw';
-</script>
-<script>
   var sheetdata=null;
   var idx_template=[-1,-1];
 
@@ -100,7 +93,4 @@
     }
 
   }
-</script>
-<script>
   document.write('<script src="https://spreadsheets.google.com/feeds/list/' + gsheet + '/1/public/values?alt=json-in-script&callback=savedata"></'+'script>');
-</script>
