@@ -3,25 +3,23 @@
 <head>
 <script>
   var sheetdata=null;
+  var idx_template=[-1,-1];
 
   function savedata(json) {
     sheetdata=json.feed.entry;
-  }
-</script>
-<script src="https://spreadsheets.google.com/feeds/list/1m5NxGi1nQF2OI77OdyJDu7mYjR1rG1KvGZHDgXmpZTw/1/public/values?alt=json-in-script&callback=savedata"></script>
-<script>
-  var idx_template=[-1,-1];
 
-  for (var i=0; i<sheetdata.length; i++) {
+    for (var i=0; i<sheetdata.length; i++) {
 
-    if (sheetdata[i].gsx$keyword.$t == 'template') {
-      idx_template[0]=i;
-      idx_template[1]=i;
-      break;
+      if (sheetdata[i].gsx$keyword.$t == 'template') {
+        idx_template[0]=i;
+        idx_template[1]=i;
+        break;
+      }
     }
 
   }
 </script>
+<script src="https://spreadsheets.google.com/feeds/list/1m5NxGi1nQF2OI77OdyJDu7mYjR1rG1KvGZHDgXmpZTw/1/public/values?alt=json-in-script&callback=savedata"></script>
 <script>
   switch(sheetdata[idx_template[0]].gsx$value1.$t) {
 
