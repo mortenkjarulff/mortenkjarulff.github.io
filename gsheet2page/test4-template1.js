@@ -26,7 +26,7 @@
         document.write('<title>' + sheetdata[idx_title[0]].gsx$value1.$t + '</title>');
         document.write('</head>');
         document.write('<body>');
-        document.write('<h1>template1</h1>');
+        document.write('<h1>hello template1</h1>');
         for (i=idx_article[0]; i<=idx_article[1]; i++) {
           document.write('article_value1[' + sheetdata[i].gsx$value1.$t + ']<br/>');
           document.write('article_value2[' + sheetdata[i].gsx$value2.$t + ']<br/>');
