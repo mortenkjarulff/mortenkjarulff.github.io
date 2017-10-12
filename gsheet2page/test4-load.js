@@ -13,7 +13,7 @@
       }
     }
 
-    sheetdata[idx_template[0]].gsx$value1.$t
-    document.write('<script src="https://spreadsheets.google.com/feeds/list/' + gsheet + '/1/public/values?alt=json-in-script&callback=savedata"></'+'script>');
+    document.write('<script src="//mortenkjarulff.github.io/gsheet2page/test4-' + sheetdata[idx_template[0]].gsx$value1.$t + '.js"></'+'script>');
+
   }
   document.write('<script src="https://spreadsheets.google.com/feeds/list/' + gsheet + '/1/public/values?alt=json-in-script&callback=savedata"></'+'script>');
